@@ -1,0 +1,1 @@
+class Solution(object):    def transpose(self, A):        """        :type A: List[List[int]]        :rtype: List[List[int]]        """        if len(A)==0:            return A        B=[]        for i in range(len(A[0])):            col=[line[i] for line in A]            B.append(col)        return B
