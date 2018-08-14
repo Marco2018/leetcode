@@ -31,3 +31,8 @@ if s[i] == 1:
 #将质数的倍数都去掉
 return sum(s)
 ```
+
+string:
+```
+s.split()和s.split(" ")
+```
