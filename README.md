@@ -35,4 +35,15 @@ return sum(s)
 string:
 ```
 s.split()和s.split(" ")
+
+string与list的切片 不用考虑越界的问题
+for i in range(0,n,2*k):
+    list1[i:i+k]=reversed(list1[i:i+k])
+
+>>> a[4:5]
+[]
+>>> s="123"
+>>> s[3:4]
+''
+不用考虑i+k>n
 ```
