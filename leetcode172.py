@@ -1,0 +1,1 @@
+class Solution(object):    def trailingZeroes(self, n):        """        :type n: int        :rtype: int        """        nums=0        while n>=5:            nums+=int(n/5)            n=int(n/5)        return numss=Solution()n=100print(s.trailingZeroes(n))

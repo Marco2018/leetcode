@@ -1,0 +1,1 @@
+class Solution:    def numJewelsInStones(self, J, S):        """        :type J: str        :type S: str        :rtype: int        """        set(J)        return len(list(filter(lambda x:x in J,list(S))))J = "aA"S = "aAAbbbb"s=Solution()print(s.numJewelsInStones(J,S))

@@ -1,0 +1,1 @@
+class Solution:    def rob(self, nums):        """        :type nums: List[int]        :rtype: int        """        n=len(nums)        index=[0 for i in range(n+2)]        for i in range(2,n+2):            index[i]=max(index[i-1],index[i-2]+nums[i-2])        return index[n+1]input=[2,7,9,3,1]s=Solution()print(s.rob(input))
