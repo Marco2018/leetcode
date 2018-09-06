@@ -1,0 +1,1 @@
+class Solution(object):    def sortColors(self, nums):        """        :type nums: List[int]        :rtype: void Do not return anything, modify nums in-place instead.        """        return nums.sort()nums=[1,1]k=0s=Solution()print(s.subarraySum(nums,k))
