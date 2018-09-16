@@ -1,0 +1,1 @@
+class Solution:    def subsets(self, nums):        self.res = []        self.dfs(nums, [])        return self.res    def dfs(self, nums, path):        if not nums:            self.res.append(path)            return        self.dfs(nums[1:], path)        self.dfs(nums[1:], path + [nums[0]])s=Solution()nums=[1,2,3]print(s.subsets(nums))
