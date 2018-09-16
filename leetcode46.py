@@ -1,0 +1,1 @@
+import itertoolsclass Solution:    def permute(self, nums):        """        :type nums: List[int]        :rtype: List[List[int]]        """        return list(itertools.permutations(nums))s=Solution()nums=[2,1,5,6,2,3]print(s.permute(nums))
