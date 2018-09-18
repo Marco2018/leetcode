@@ -1,0 +1,1 @@
+class Solution:    def peakIndexInMountainArray(self, A):        """        :type A: List[int]        :rtype: int        """        n=len(A)        for i in range(1,n,1):            if A[i]<=A[i-1]:                index=i-1                break        return indexs=Solution()A=[0,2,1,0]print(s.peakIndexInMountainArray(A))
