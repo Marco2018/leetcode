@@ -1,0 +1,1 @@
+class Solution(object):    def stoneGame(self, piles):        """        :type piles: List[int]        :rtype: bool        """        return Trues=Solution()piles=[2,3,1,1,4]print(s.stoneGame(piles))
