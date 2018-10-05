@@ -1,0 +1,1 @@
+class Solution:    def combinationSum4(self, nums, target):        dp=[0 for i in range(target+1)]        dp[0]=1        for i in range(1,target+1,1):            for item in nums:                if i-item>=0:                    dp[i]+=dp[i-item]        return dp[target]# 这题已经不算combination了可以看作可以跨nums当中的步数，有多少种方法可以走到targetdp
