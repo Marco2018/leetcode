@@ -1,0 +1,1 @@
+class Solution(object):    def maximumGap(self, nums):        """        :type nums: List[int]        :rtype: int        """        nums.sort()        index=0        for i in range(len(nums)-1):            if nums[i+1]-nums[i]>index:                index=nums[i+1]-nums[i]        return index#可以用bucket sort不过在这道题中只要n<2**32则32*O(N)>O(NlogN),而sort内置方法的时间复杂度为O(NlogN)
