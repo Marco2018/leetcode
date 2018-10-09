@@ -1,0 +1,1 @@
+class Solution:    def isSubsequence(self, s, t):        """        :type s: str        :type t: str        :rtype: bool        """        n1,n2,i,j=len(s),len(t),0,0        while i<n1 and j<n2:            if s[i]==t[j]:                i+=1            j+=1        if i==n1:            return True        return False#dp 思想是dp[n1+1][n2+1]矩阵
