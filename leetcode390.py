@@ -1,0 +1,1 @@
+class Solution:    def lastRemaining(self, n):        """        :type n: int        :rtype: int        """        nums=range(1,n+1,1)        while len(nums)>1:            nums=nums[1::2][::-1]        return nums[0]切片更快比这个要快nums=[nums[i] for i in range(len(nums)) if i%2==1][::-1]
