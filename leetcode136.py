@@ -1,0 +1,1 @@
+class Solution(object):    def singleNumber(self, nums):        n=len(nums)        for i in range(1,n):            nums[0]=nums[0]^nums[i]        return nums[0]

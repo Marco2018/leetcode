@@ -1,0 +1,1 @@
+class Solution(object):    def hammingDistance(self, x, y):        count=0        while x or y:            a=x%2            b=y%2            if a!=b:                count=count+1            x=(x-a)/2            y=(y-b)/2        return count
