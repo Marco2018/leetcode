@@ -33,3 +33,19 @@ for i in itertools.product(list1, list2):
 ('b', 'd')
 使用"".join(s)将这些字母串起来
 """
+
+
+class solution():
+    def letter(self,str1):
+        self.letters=["abc","def","ghi","jki","mno","pqrs","tuv","wxyz"]
+        self.res=[]
+        self.helper("",str1)
+        return self.res
+    def helper(self,temp,str1):
+        if len(str1)==0:
+            self.res.append(temp)
+            return
+        letters=self.letters[ord(str1[0])-ord("2")]
+        for letter in letters:
+            self.helper(temp+letter,str1[1::])
+        return
