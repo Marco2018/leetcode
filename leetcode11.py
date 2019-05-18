@@ -1,12 +1,8 @@
 def maxArea(height):
-    area=maxarea=0
-    n=len(height)
-    j=n-1
-    i=0
+    maxarea,n,i,j=0,len(height),0,n-1
     while i<j:
         area=min(height[i],height[j])*(j-i)
-        if area>maxarea:
-            maxarea=area
+        maxarea=max(area,maxarea)
         if height[i]>height[j]:
             j=j-1
         else:

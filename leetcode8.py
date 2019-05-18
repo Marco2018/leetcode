@@ -1,38 +1,25 @@
-def myAtoi(str1):
-    n=len(str1)
-    i=0
-    isfirst=isminus=isfirstword=0
-    num=0
-    while i<n:
-        if str1[i]==" " and isfirstblank==0:
-           i=i+1
-           continue
+class Solution:
+    def myAtoi(self,str1):
+        MAX_INT = 2147483647
+        MIN_INT = -2147483648
+        n,result,i,sign=len(str1),0,0,1
+        while i<n and str1[i]==" ":
+            i+=1
+        if i<n and str1[i]=="-":
+            sign=-1
+            i+=1
+        elif i<n and str1[i]=="+":
+            sign=1
+            i+=1
+        while i<n and "0"<=str1[i]<="9":
+            result=result*10+ord(str1[i])-ord("0")
+            i+=1
+        result=sign*result
+        if result<MIN_INT: 
+            return MIN_INT
+        elif result>MAX_INT:
+            return MAX_INT
         else:
-            isfirstblank=1
-            if isfirstword==0:
-                if str1[i]>="0" and str1[i]<="9" or str1[i]=="+" or str1[i]=="-":
-                    isfirstword=1
-                    if str1[i]=="-":
-                        isminus=1
-                    if str1[i]>="0" and str1[i]<="9":
-                        num=num*10
-                        num=num+ord(str1[i])-ord('0')
-                else:
-                    break
-            else:
-                if str1[i]>="0" and str1[i]<="9":
-                    num=num*10
-                    num=num+ord(str1[i])-ord('0')
-                else:
-                    break
-        i=i+1
-    if isminus==1:
-        num=-num
-    if num>2**31-1:
-        num=2**31-1
-    elif num<-2**31:
-        num=-2**31
-    return  num
-
-string = "-91283472332"
-print(myAtoi(string))
+            return result
+        
+python中没有MAX_INT MIN_INT这样的常量
