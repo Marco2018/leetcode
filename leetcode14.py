@@ -1,20 +1,15 @@
-def longestCommonPrefix(strs):
-    n = len(strs)
-    if n == 0:
-        return ""
-    str = ""
-    index = 10000
-    for k in range(n):
-        if len(strs[k]) < index:
-            index = len(strs[k])
-    for j in range(index):
-        word = strs[0][j]
-        for i in range(n):
-            if strs[i][j] != word:
-                return str
-        str = strs[0][:j+1:]
-    return str
+class Solution(object):
+    def longestCommonPrefix(self, strs):
+        n = len(strs)
+        if n == 0 or len(strs[0]) == 0: return ""
+        for j in range(1, len(strs[0]) + 2):
+            for i in range(1, n):
+                if len(strs[i]) < j:
+                    return strs[0][:j - 1]
+                if strs[i][:j] != strs[0][:j]:
+                    return strs[0][:j - 1]
+        return strs[0][:j - 1]
 
-
-str=["a"]
-print(longestCommonPrefix(str))
+Runtime: 20 ms, faster than 93.94% of Python online submissions for Longest Common Prefix.
+找到最短的str
+shortest = min(strs, key=len)  “flow”
